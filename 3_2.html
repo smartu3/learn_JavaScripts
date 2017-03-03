@@ -1,0 +1,59 @@
+<html>
+<head>
+	<script>
+		alert('Hello, world');
+		var x = 1;//完整赋值语句
+		'Hello, world';
+		if (2 >1) {
+			x =1;// 添加缩进易于代码理解
+			y =2;
+			z =3;
+			if (x <y) {
+				z = 5;
+			} //嵌套层级结构
+		};//alert('行注释')
+		/* alert('块注释')*/
+
+		//数据类型和变量，不区分整数和浮点数，统一用Nmuber表示
+		//Number可直接四则运算
+		//字符串，单双引号括起来的任意文本
+		//布尔值 true/false
+		//&&与运算 ||或运算 ！非运算
+		//比较运算符
+		//js中，相等运算符请务必使用===
+		//NaN，特殊的Number与任何值（包括他本身）都不相等
+		//判断NaN的方法是通过isNaN()函数
+		isNaN(NaN); //true
+		//比较浮点数时，因为浮点数是非精确计算，所以需要比较绝对值差是否符合阈值
+		//null 即Python中的None
+		//undefined表示未定义
+		[1,2,3.14,'Hello',null,true];//数组
+		new Array(1,2,3);//利用Arrya()函数创建数组，推荐[]
+		//数组支持索引访问
+		//对象
+		var person = {
+			name:'Bob',
+			age:20,
+			tags:['js','web','mobile'],
+			city:'Beijing',
+			hasCar:true,
+			zipcode:null
+		};//JS对象的键是字符串类型的，值可以为任意数据类型
+		//获取对象属性，使用对象变量.属性名:
+		person.name;
+		person.zipcode;
+		//同一个变量可以使用 = 号申明多次不同值，但只能使用var 一次！
+		var a = 123;
+		a = 456;
+		//若一个变量没有通过var申明，那将被申明为全局变量;
+		i = 10;//i为全局变量；
+		//strict模式：在JS代码第一行添加'use strict';
+		//strict模式下，使用var 强制申明变量，未通过var申明变量将导致运行出错
+		
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>
