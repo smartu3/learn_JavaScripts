@@ -1,0 +1,43 @@
+<html>
+<head>
+	<script>
+	//对象
+	//JS对象为无序集合数据类型，由若干键值对组成;
+	var xiaoming = {
+		name:'小明',
+		birth:1990,
+		school:'No.1 Middle School',
+		height:1.70,
+		weight:65,
+		score:null
+	};
+	//JS用{....}表示一个对象，键值对以xxx:xxxx形式申明，用,隔开，最后一个不加逗号
+	xiaoming.name;
+	xiaoming.birth;//属性访问
+	//属性名包含特殊字符串，访问时需要用''括起来：
+	var xiaohong={
+		name:'小红',
+		'middle-shcool':'No.1 Middle School'
+	};
+	xiaohong.name;
+	xiaohong['name'];
+	xiaohong['middle-shcool'];
+	//属性名尽量用标准的变量名，可以使用标准的object.prop访问
+	//访问不存在的属性，返回undefined
+	xiaohong.age;//undefined
+	//JS对象是动态类型
+	xiaohong.age = 18；
+	xiaohong.age;//18
+	delete xiaohong.age//删除age属性
+	//检测是否具有某一属性，in操作符；
+	'age' in xiaohong;//false
+	'name' in xiaohong;//true
+	//用'in'胖段属性存在，属性不一定是对象的，也许可能来自对象继承；
+	//hasOwnProperty()方法判断是否来自继承;
+	xiaoming.hasOwnProperty('name');//true
+	xiaoming.hasOwnProperty('toString');//false
+	</script>
+</head>
+<body>
+</body>
+</html>
