@@ -1,0 +1,49 @@
+<html>
+<head>
+	<script>
+	//JS默认对象表示{}中，键必须为字符串，类似于Python中的dict
+	//为解决需要使用其他类型数据对象作为键的情况，ES引入了新的数据类型Map
+	//Map为键值对结构
+	var m = new Map([['Michael',95],['Bob',75],['Tracy',85]]);
+	m.get('Michael');//95
+	//初始化Map需要一个二维数组；或初始化一个空的Map
+	var m = new Map();
+	m.set('Adam',67)//添加一个新的key-value
+	m.has('Adam')//返回布尔值
+	m.get('Adam')//返回对应的value，否则返回undefined
+	m.delete('Adam')
+	//对同一个key多次放入value，后面的value会覆盖前面的value
+	
+	//Set不存储value，key的集合
+	var s1 = new Set();
+	var s2 = new Set([1,2,3]);
+	s1.add(4);
+	s1.delete(4)
+	
+	//iterable
+	//ES6中，Array,Map,Set都属于iterable类型；可通过for...of循环遍历
+	//for...in循环遍历对象的属性名称，array数组的元素索引被视为一个属性；
+	//for...of循环只遍历集合本身的元素；（Map,Set,Array都视为一种集合）
+	//iterable 内置forEach方法，每次接收一个函数，每次迭代自动回调该函数
+	var a=['A','B','C']
+	a.forEach(function(element,index,array){
+		alert(element);
+	});
+	var s = new Set(['a','b','c']);
+	s.forEach(function(element,sameElement,set){
+		alert(element);
+	})
+	var m = new Map([[1,'x'],[2,'y'],[3,'z']]);
+	m.forEach(function(value,key,map){
+		alert(value);
+	})
+	//JS对函数调用不要求完全一致，对于无需要的参数可以省略；
+	var a =['A','B','C'];
+	a.forEach(function(element){
+		alert(element);
+	})
+	</script>
+</head>
+<body>
+</body>
+</html>
