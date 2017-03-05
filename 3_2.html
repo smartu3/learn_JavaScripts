@@ -49,7 +49,29 @@
 		i = 10;//i为全局变量；
 		//strict模式：在JS代码第一行添加'use strict';
 		//strict模式下，使用var 强制申明变量，未通过var申明变量将导致运行出错
-		
+		//字符串，引号中包含其他引号时，使用转义字符\
+		var C = 'I \'m the one';
+		//多行字符串 ~ ~
+		var Cm = `Hi
+					babe`;
+		//字符串相连：使用+号；或${C},${Cm}
+		//操作字符串 C.length;获取长度，字符串支持索引访问：C[0]
+		//字符串不可变，如对字符串某个索引赋值，将不会生效；
+		//toUpperCase()把字符串全部变为大写；toLowerCase()把字符串全部变为小写
+		//indexOf()搜索指定字符串出现位置
+		var s ='hello,world';
+		s.indexOf('world');//返回7
+		//substring()返回指定索引区间的子串；
+		s.substring(0,5);//返回'hello'
+		//对数组的length赋值，会改变数组，增添相应的undefined对象
+		//对数组通过索引赋值，会改变对应值，若超出了数组大小，会添加相应的undefined对象
+		//数组的indexOf，搜索指定元素的索引位置；
+		//slice,截取数组的元素
+		//slice()可以直接复制数组
+		//push()向末尾添加若干元素，pop()把array最后一个元素删掉
+		//unshift(),shift()对应向array头部添加和删除元素；
+		//sort()对当前Array进行排序；reverse()反转Array元素；
+		//
 	</script>
 </head>
 
