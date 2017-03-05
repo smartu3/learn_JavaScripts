@@ -1,0 +1,61 @@
+<html>
+<head>
+	<script>
+	//条件判断
+	//JS使用if(){...}else{...}进行条件判断
+	’use strict';
+	var age = 20;
+	if (age >= 6) {
+		alert('teenager');
+	} else if (age >=18) {
+		alert('adult');
+	} else {
+		alert('kid');
+	}
+	//‘teenager'，顺序重要性
+	//JS判断中，null,undefined,0,NaN,空字符串''视为false,其他为true
+	
+	//循环
+	var x =0;
+	var i;
+	for (i=1; i<=10000;i++) {
+		x = x + i;
+	}
+	//for循环常用来利用索引遍历数组
+	//for循环三个条件都可以省略；如果没有退出循环的判断条件，用break条件来退出；
+	var x=0;
+	for (;;) {
+		if (x >100) {
+			break;
+		}
+		x++;
+	}
+	//for ...in
+	var o = {
+		name:'Jack';
+		age:20;
+		city:'Beijing'
+	}
+	for (var key in o) {
+		alert(key);
+	}
+	//for...in对Array循环得到的是String而不是Number;
+	
+	//While循环,条件清晰
+	var x = 0;
+	var n =99;
+	while (n>0) {
+		x = x+n;
+		n = n-2;
+	}
+	//do..while循环的最大特点是循环至少执行一次
+	var n =0;
+	do {
+		n = n+1;
+	} while (n < 100);
+	n;//100
+	</script>
+</head>
+<body>
+</body>
+</html>
